@@ -9,7 +9,7 @@ public class ToyShop {
         public String name;
         public int weight;
 
-        public Toy(int id, String name, int weight) {
+        public Toy(int id, int weight, String name) {
             this.id = id;
             this.name = name;
             this.weight = weight;
@@ -21,9 +21,9 @@ public class ToyShop {
     public void put(String input) {
         String[] parts = input.split(" ");
         int id = Integer.parseInt(parts[0]);
-        String name = parts[1];
-        int weight = Integer.parseInt(parts[2]);
-        Toy toy = new Toy(id, name, weight);
+        int weight = Integer.parseInt(parts[1]);
+        String name = parts[2];
+        Toy toy = new Toy(id, weight, name);
         toysQueue.add(toy);
     }
 
